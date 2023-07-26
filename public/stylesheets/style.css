@@ -1,6 +1,9 @@
+@import url('https://fonts.googleapis.com/css2?family=Barlow&display=swap');
+
 * {
   margin: 0;
   padding: 0;
+  font-family: 'Barlow', sans-serif;
 }
 
 ::-webkit-scrollbar {
@@ -26,13 +29,11 @@ body {
   height: 100vh;
   display: grid;
   place-content: center;
-  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
   background: #f1f1f1;
 }
 
-.container {
-  height: 80vh;
-  width: 50vw;
+.container,
+.form-container {
   background: white;
   border: 1px solid #121212;
   box-shadow: 0 8px 16px rgba(0, 0, 0, 0.6);
@@ -41,7 +42,13 @@ body {
   grid-template-rows: 1fr 9fr;
 }
 
-h1 {
+.container {
+  height: 80vh;
+  width: 50vw;
+}
+
+h1,
+h2 {
   color: white;
   background: #121212;
   height: 100%;
@@ -81,13 +88,68 @@ li > p:first-child {
   padding-bottom: 0.5rem;
 }
 
+.form-container {
+  width: 400px;
+}
+
+form {
+  height: 100%;
+  align-items: center;
+  gap: 2rem;
+  padding: 1.5rem 0;
+}
+
+form,
+form > div {
+  display: flex;
+  flex-direction: column;
+}
+
+form > div {
+  gap: 0.4rem;
+  width: 80%;
+  position: relative;
+}
+
+input {
+  font-size: 1.2rem;
+  outline: none;
+  padding: 10px;
+  z-index: 1;
+  background: transparent;
+  border: 1px solid #121212;
+  border-radius: 4px;
+}
+
+label {
+  font-size: 1.1rem;
+  position: absolute;
+  top: 0.4rem;
+  left: 0.4rem;
+  background: white;
+  color: #121212;
+  padding: 4px 8px;
+  border-radius: 4px;
+  transition: 0.3s ease;
+  text-transform: uppercase;
+}
+
+input:focus ~ label,
+input:valid ~ label {
+  font-size: 0.75rem;
+  top: -0.8rem;
+  background: #121212;
+  color: white;
+  z-index: 2;
+}
+
 a {
   position: absolute;
   top: 2rem;
   text-decoration: none;
   background: white;
   color: #121212;
-  border: 2px solid #121212;
+  border: 1px solid #121212;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4);
   padding: 5px 10px;
   border-radius: 10px;

@@ -1,11 +1,14 @@
 extends layout
 
 block content
+    div.form-container
+        h2= 'Create your message'
+        form(method="POST" action="/new")
+            div
+                input(name="text" required="true" type="text")
+                label= "Name"
+            div
+                input(name="user" required="true" type="text")
+                label= "Message"
+            button(type='submit')= "Add Message"
     a(href="/" class="message-page-link")= '< Back to the messages'
-    h2= 'Create your message'
-    form(method="POST" action="/new")
-        label= "Your name"
-        input(name="text" type="text")
-        label= "Your message"
-        input(name="user" type="text")
-        button(type='submit')= "Add Message"
