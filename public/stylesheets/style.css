@@ -37,6 +37,9 @@ ul {
   list-style-type: none;
   overflow-y: auto;
   padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.6rem;
 }
 
 a {
