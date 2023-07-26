@@ -1,7 +1,7 @@
 extends layout
 
 block content
-    a(href="/")= 'Go Back'
+    a(href="/" class="message-page-link")= '< Back to the messages'
     h2= 'Create your message'
     form(method="POST" action="/new")
         label= "Your name"

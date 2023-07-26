@@ -16,7 +16,157 @@ const messages = [
     text: 'Buh',
     user: 'Buh',
     added: new Date().toLocaleTimeString() + ' - ' + new Date().toLocaleDateString()
-  }
+  },
+  {
+    text: 'Hello!',
+    user: 'Alina',
+    added: new Date().toLocaleTimeString() + ' - ' + new Date().toLocaleDateString()
+  },
+  {
+    text: 'Hey, what\'s up?',
+    user: 'Elise',
+    added: new Date().toLocaleTimeString() + ' - ' + new Date().toLocaleDateString()
+  },
+  {
+    text: 'Buh',
+    user: 'Buh',
+    added: new Date().toLocaleTimeString() + ' - ' + new Date().toLocaleDateString()
+  },
+    {
+    text: 'Hello!',
+    user: 'Alina',
+    added: new Date().toLocaleTimeString() + ' - ' + new Date().toLocaleDateString()
+  },
+  {
+    text: 'Hey, what\'s up?',
+    user: 'Elise',
+    added: new Date().toLocaleTimeString() + ' - ' + new Date().toLocaleDateString()
+  },
+  {
+    text: 'Buh',
+    user: 'Buh',
+    added: new Date().toLocaleTimeString() + ' - ' + new Date().toLocaleDateString()
+  },
+    {
+    text: 'Hello!',
+    user: 'Alina',
+    added: new Date().toLocaleTimeString() + ' - ' + new Date().toLocaleDateString()
+  },
+  {
+    text: 'Hey, what\'s up?',
+    user: 'Elise',
+    added: new Date().toLocaleTimeString() + ' - ' + new Date().toLocaleDateString()
+  },
+  {
+    text: 'Buh',
+    user: 'Buh',
+    added: new Date().toLocaleTimeString() + ' - ' + new Date().toLocaleDateString()
+  },
+  {
+    text: 'Hello!',
+    user: 'Alina',
+    added: new Date().toLocaleTimeString() + ' - ' + new Date().toLocaleDateString()
+  },
+  {
+    text: 'Hey, what\'s up?',
+    user: 'Elise',
+    added: new Date().toLocaleTimeString() + ' - ' + new Date().toLocaleDateString()
+  },
+  {
+    text: 'Buh',
+    user: 'Buh',
+    added: new Date().toLocaleTimeString() + ' - ' + new Date().toLocaleDateString()
+  },
+  {
+    text: 'Hello!',
+    user: 'Alina',
+    added: new Date().toLocaleTimeString() + ' - ' + new Date().toLocaleDateString()
+  },
+  {
+    text: 'Hey, what\'s up?',
+    user: 'Elise',
+    added: new Date().toLocaleTimeString() + ' - ' + new Date().toLocaleDateString()
+  },
+  {
+    text: 'Buh',
+    user: 'Buh',
+    added: new Date().toLocaleTimeString() + ' - ' + new Date().toLocaleDateString()
+  },
+  {
+    text: 'Hello!',
+    user: 'Alina',
+    added: new Date().toLocaleTimeString() + ' - ' + new Date().toLocaleDateString()
+  },
+  {
+    text: 'Hey, what\'s up?',
+    user: 'Elise',
+    added: new Date().toLocaleTimeString() + ' - ' + new Date().toLocaleDateString()
+  },
+  {
+    text: 'Buh',
+    user: 'Buh',
+    added: new Date().toLocaleTimeString() + ' - ' + new Date().toLocaleDateString()
+  },
+  {
+    text: 'Hello!',
+    user: 'Alina',
+    added: new Date().toLocaleTimeString() + ' - ' + new Date().toLocaleDateString()
+  },
+  {
+    text: 'Hey, what\'s up?',
+    user: 'Elise',
+    added: new Date().toLocaleTimeString() + ' - ' + new Date().toLocaleDateString()
+  },
+  {
+    text: 'Buh',
+    user: 'Buh',
+    added: new Date().toLocaleTimeString() + ' - ' + new Date().toLocaleDateString()
+  },
+  {
+    text: 'Hello!',
+    user: 'Alina',
+    added: new Date().toLocaleTimeString() + ' - ' + new Date().toLocaleDateString()
+  },
+  {
+    text: 'Hey, what\'s up?',
+    user: 'Elise',
+    added: new Date().toLocaleTimeString() + ' - ' + new Date().toLocaleDateString()
+  },
+  {
+    text: 'Buh',
+    user: 'Buh',
+    added: new Date().toLocaleTimeString() + ' - ' + new Date().toLocaleDateString()
+  },
+  {
+    text: 'Hello!',
+    user: 'Alina',
+    added: new Date().toLocaleTimeString() + ' - ' + new Date().toLocaleDateString()
+  },
+  {
+    text: 'Hey, what\'s up?',
+    user: 'Elise',
+    added: new Date().toLocaleTimeString() + ' - ' + new Date().toLocaleDateString()
+  },
+  {
+    text: 'Buh',
+    user: 'Buh',
+    added: new Date().toLocaleTimeString() + ' - ' + new Date().toLocaleDateString()
+  },
+  {
+    text: 'Hello!',
+    user: 'Alina',
+    added: new Date().toLocaleTimeString() + ' - ' + new Date().toLocaleDateString()
+  },
+  {
+    text: 'Hey, what\'s up?',
+    user: 'Elise',
+    added: new Date().toLocaleTimeString() + ' - ' + new Date().toLocaleDateString()
+  },
+  {
+    text: 'Buh',
+    user: 'Buh',
+    added: new Date().toLocaleTimeString() + ' - ' + new Date().toLocaleDateString()
+  },
 ];
 
 /* GET home page. */
