@@ -2,3 +2,10 @@ extends layout
 
 block content
     a(href="/")= 'Go Back'
+    h2= 'Create your message'
+    form(method="POST" action="/new")
+        label= "Your name"
+        input(type="text")
+        label= "Your message"
+        input(type="text")
+        button(type='submit')= "Add Message"

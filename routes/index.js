@@ -7,12 +7,17 @@ router.get('/', function(req, res, next) {
     {
       text: 'Hello!',
       user: 'Alina',
-      added: new Date()
+      added: new Date().toLocaleTimeString() + ' - ' + new Date().toLocaleDateString()
     },
     {
       text: 'Hey, what\'s up?',
       user: 'Elise',
-      added: new Date()
+      added: new Date().toLocaleTimeString() + ' - ' + new Date().toLocaleDateString()
+    },
+    {
+      text: 'Buh',
+      user: 'Buh',
+      added: new Date().toLocaleTimeString() + ' - ' + new Date().toLocaleDateString()
     }
   ];
 
