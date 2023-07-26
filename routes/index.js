@@ -3,19 +3,19 @@ const router = express.Router();
 
 const messages = [
   {
-    text: 'Hello!',
+    user: 'Me',
+    added: new Date().toLocaleDateString() + ' - ' + new Date().toLocaleTimeString(),
+    text: 'Welcome to my mini messaging board!',
+  },
+  {
     user: 'Alina',
-    added: new Date().toLocaleTimeString() + ' - ' + new Date().toLocaleDateString()
+    added: new Date().toLocaleDateString() + ' - ' + new Date().toLocaleTimeString(),
+    text: 'Helloooooooo!?!?',
   },
   {
-    text: 'Hey, what\'s up?',
-    user: 'Elise',
-    added: new Date().toLocaleTimeString() + ' - ' + new Date().toLocaleDateString()
-  },
-  {
-    text: 'Buh',
-    user: 'Buh',
-    added: new Date().toLocaleTimeString() + ' - ' + new Date().toLocaleDateString()
+    user: 'Lorem Ipsum',
+    added: new Date().toLocaleDateString() + ' - ' + new Date().toLocaleTimeString(),
+    text: 'Lorem ipsum dolor sit amet'
   }
 ];
 
@@ -26,7 +26,7 @@ router.get('/', function(req, res, next) {
 
 router.post('/new', function(req, res, next) {
   const message = req.body;
-  messages.push({text: message.text, user: message.user, added: new Date().toLocaleTimeString() + ' - ' + new Date().toLocaleDateString()});
+  messages.push({user: message.user, added: new Date().toLocaleTimeString() + ' - ' + new Date().toLocaleDateString(), text: message.text});
 
   res.redirect('/');
 })

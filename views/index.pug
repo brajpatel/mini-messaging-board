@@ -6,7 +6,6 @@ block content
     ul
       each message in messages
         li
+          p= message.user + ' - ' + message.added
           p= message.text
-          p= message.user
-          p= message.added
   a(href="/new" class="form-link")= 'Create New Message >'
