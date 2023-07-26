@@ -1,6 +1,26 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
 body {
-  padding: 50px;
+  height: 90vh;
+  display: grid;
+  place-content: center;
   font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+  background: #f1f1f1;
+}
+
+.container {
+  height: 500px;
+  width: 700px;
+  border: 2px solid black;
+  border-top-width: 10px;
+  border-radius: 10px;
+}
+
+ul {
+  list-style-type: none;
 }
 
 a {
