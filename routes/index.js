@@ -25,7 +25,8 @@ router.get('/', function(req, res, next) {
 });
 
 router.post('/new', function(req, res, next) {
-  console.log(req.body)
+  const message = req.body;
+  messages.push({text: message.text, user: message.user, added: new Date().toLocaleTimeString() + ' - ' + new Date().toLocaleDateString()});
 })
 
 module.exports = router;
