@@ -16,11 +16,6 @@ const messages = [
     user: 'Lorem Ipsum',
     added: new Date().toLocaleDateString() + ' - ' + new Date().toLocaleTimeString(),
     text: 'Lorem ipsum dolor sit amet'
-  },
-  {
-    user: 'Me',
-    added: new Date().toLocaleDateString() + ' - ' + new Date().toLocaleTimeString(),
-    text: 'SOMETHING IS UP WITH THE NEW MESSAGES'
   }
 ];
 
