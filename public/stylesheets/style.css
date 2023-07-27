@@ -54,7 +54,7 @@ body {
 
 .container {
   height: 80vh;
-  width: 50vw;
+  width: 55vw;
 }
 
 h1,
@@ -74,7 +74,7 @@ ul {
   list-style-type: none;
   overflow-x: hidden;
   overflow-y: auto;
-  padding: 1.5rem;
+  padding: 1.5rem 2rem;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -92,11 +92,11 @@ li {
   flex-direction: column;
   gap: 0.5rem;
   opacity: 0;
-  animation: fadeIn 0.5s ease forwards;
+  animation: cascadeFadeIn 0.5s ease forwards;
   animation-delay: calc(0.15s * var(--delay));
 }
 
-@keyframes fadeIn {
+@keyframes cascadeFadeIn {
   from {
     transform: translateY(-10px);
     opacity: 0;
@@ -117,6 +117,20 @@ li > p:first-child {
   width: 400px;
   display: flex;
   flex-direction: column;
+  opacity: 0;
+  animation: fadeIn 0.5s ease forwards;
+}
+
+@keyframes fadeIn {
+  from {
+    transform: translateY(-2rem);
+    opacity: 0;
+  }
+
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
 }
 
 h2 {
