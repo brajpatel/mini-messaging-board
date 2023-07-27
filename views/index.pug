@@ -4,8 +4,8 @@ block content
   div.container
     h1= title
     ul
-      each message in messages
-        li
+      each message, index in messages
+        li(style=`--delay:${index + 1}`)
           p= message.user + ' - ' + message.added
           p= message.text
   a(href="/new" class="form-link")= 'Create New Message >'

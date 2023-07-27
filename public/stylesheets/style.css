@@ -91,6 +91,21 @@ li {
   display: flex;
   flex-direction: column;
   gap: 0.5rem;
+  opacity: 0;
+  animation: fadeIn 0.5s ease forwards;
+  animation-delay: calc(0.15s * var(--delay));
+}
+
+@keyframes fadeIn {
+  from {
+    transform: translateY(-10px);
+    opacity: 0;
+  }
+
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
 }
 
 li > p:first-child {
