@@ -6,6 +6,8 @@ block content
     ul
       each message, index in messages
         li(style=`--delay:${index + 1}`)
-          p= message.user + ' - ' + message.added
+          div
+            p= message.user
+            p= '- ' + message.added
           p= message.text
   a(href="/new" class="form-link")= 'Create New Message >'

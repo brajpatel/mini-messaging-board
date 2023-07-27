@@ -90,14 +90,20 @@ li {
   background: white;
   border-radius: 10px;
   color: #121212;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+  border: 1px solid #888888;
   padding: 8px;
   display: flex;
   flex-direction: column;
   gap: 0.5rem;
+  transition: 0.3s ease;
   opacity: 0;
   animation: cascadeFadeIn 0.5s ease forwards;
   animation-delay: calc(0.15s * var(--delay));
+}
+
+li:hover {
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+  border-color: white;
 }
 
 @keyframes cascadeFadeIn {
@@ -112,9 +118,20 @@ li {
   }
 }
 
-li > p:first-child {
+li > div {
   border-bottom: 1px solid #121212;
   padding-bottom: 0.5rem;
+  display: flex;
+  gap: 0.2rem;
+}
+
+li > div > p:first-child {
+  font-weight: bold;
+  transition: 0.3s ease;
+}
+
+li:hover > div > p:first-child {
+  color: #ff5015;
 }
 
 .form-container {
