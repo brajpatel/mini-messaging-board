@@ -5,10 +5,10 @@ const messages = [
   {
     user: 'Me',
     added: new Date().toLocaleDateString() + ' - ' + new Date().toLocaleTimeString(),
-    text: 'Welcome to my mini messaging board!',
+    text: 'Welcome to my mini messaging board... Feel free to create a SENSIBLE message to put on the board!',
   },
   {
-    user: 'Alina',
+    user: 'Sip',
     added: new Date().toLocaleDateString() + ' - ' + new Date().toLocaleTimeString(),
     text: 'Helloooooooo!?!?',
   },
