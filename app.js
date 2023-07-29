@@ -1,11 +1,33 @@
+require("dotenv").config();
 const createError = require('http-errors');
 const express = require('express');
 const path = require('path');
 const cookieParser = require('cookie-parser');
 const logger = require('morgan');
 
+const mongoose = require('mongoose');
+mongoose.set("strictQuery", false);
+const mongoDB = process.env.MONGODB_CONNECTION_STRING;
+
+main().catch((err) => console.log(err));
+
+async function main() {
+  await mongoose.connect(mongoDB);
+}
+
+// mongoose.connect(
+//   process.env.MONGODB_CONNECTION_STRING,
+//   {
+//     useNewUrlParser: true,
+//     useUnifiedTopology: true
+//   }
+// )
+// .then(() => console.log("MongoDB Connected!"))
+// .catch((err) => console.log(err));
+
 const indexRouter = require('./routes/index');
 const newMessageRouter = require('./routes/new');
+const { mainModule } = require('process');
 
 const app = express();
 
