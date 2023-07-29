@@ -16,14 +16,17 @@ mongoose.connect(mongoDB, {
 })
 .catch((err) => console.error(err));
 
+// create message schema
 const messageSchema= new mongoose.Schema({
   user: {type: String, required: true},
   text: {type: String, required: true},
   added: String
 })
 
+// create model from schema
 const Message = mongoose.model('Message', messageSchema);
 
+// get messages from collection
 async function getMessages() {
   const messages = await Message.find({});
 
@@ -37,11 +40,18 @@ router.get('/', function(req, res, next) {
   })
 });
 
-// router.post('/new', function(req, res, next) {
-//   const message = req.body;
-//   messages.push({user: message.user, added: new Date().toLocaleDateString() + ' - ' + new Date().toLocaleTimeString(), text: message.text});
+/* INSERT a message in to the database */
+router.post('/new', function(req, res, next) {
+  const data = req.body;
+  const message = new Message({
+    user: data.user,
+    text: data.text,
+    added: new Date().toLocaleDateString() + ' - ' + new Date().toLocaleTimeString()
+  })
 
-//   res.redirect('/');
-// })
+  message.save().then(() => console.log("Added new entry"), (err) => console.log(err));
+
+  res.redirect('/');
+})
 
 module.exports = router;
