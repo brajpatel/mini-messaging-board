@@ -43,12 +43,12 @@ router.get('/', function(req, res, next) {
 /* INSERT a message in to the database */
 router.post('/new', function(req, res, next) {
   const data = req.body;
+
   const message = new Message({
     user: data.user,
     text: data.text,
     added: new Date().toLocaleDateString() + ' - ' + new Date().toLocaleTimeString()
   })
-
   message.save().then(() => console.log("Added new entry"), (err) => console.log(err));
 
   res.redirect('/');
