@@ -1,34 +1,47 @@
+require("dotenv").config();
 const express = require('express');
 const router = express.Router();
 
-const messages = [
-  {
-    user: 'Me',
-    added: new Date().toLocaleDateString() + ' - ' + new Date().toLocaleTimeString(),
-    text: 'Welcome to my mini messaging board... Feel free to create a SENSIBLE message to put on the board!',
-  },
-  {
-    user: 'Sip',
-    added: new Date().toLocaleDateString() + ' - ' + new Date().toLocaleTimeString(),
-    text: 'Helloooooooo!?!?',
-  },
-  {
-    user: 'Lorem Ipsum',
-    added: new Date().toLocaleDateString() + ' - ' + new Date().toLocaleTimeString(),
-    text: 'Lorem ipsum dolor sit amet'
-  }
-];
+const mongoose = require('mongoose');
+mongoose.set("strictQuery", false);
+const mongoDB = process.env.MONGODB_CONNECTION_STRING;
+
+mongoose.connect(mongoDB, {
+  useNewUrlParser: true,
+  useUnifiedTopology: true,
+  dbName: 'mini_messaging_board'
+})
+.then(() => {
+  console.log('Connected to the Database');
+})
+.catch((err) => console.error(err));
+
+const messageSchema= new mongoose.Schema({
+  user: {type: String, required: true},
+  text: {type: String, required: true},
+  added: String
+})
+
+const Message = mongoose.model('Message', messageSchema);
+
+async function getMessages() {
+  const messages = await Message.find({});
+
+  return messages;
+}
 
 /* GET home page. */
 router.get('/', function(req, res, next) {
-  res.render('index', { title: 'Mini Messaging Board', messages: messages });
+  getMessages().then((foundMessages) => {
+    res.render('index', { messages: foundMessages });
+  })
 });
 
-router.post('/new', function(req, res, next) {
-  const message = req.body;
-  messages.push({user: message.user, added: new Date().toLocaleDateString() + ' - ' + new Date().toLocaleTimeString(), text: message.text});
+// router.post('/new', function(req, res, next) {
+//   const message = req.body;
+//   messages.push({user: message.user, added: new Date().toLocaleDateString() + ' - ' + new Date().toLocaleTimeString(), text: message.text});
 
-  res.redirect('/');
-})
+//   res.redirect('/');
+// })
 
 module.exports = router;

@@ -1,31 +1,11 @@
-require("dotenv").config();
 const createError = require('http-errors');
 const express = require('express');
 const path = require('path');
 const cookieParser = require('cookie-parser');
 const logger = require('morgan');
 
-const mongoose = require('mongoose');
-mongoose.set("strictQuery", false);
-const mongoDB = process.env.MONGODB_CONNECTION_STRING;
-
-main().catch((err) => console.log(err));
-
-async function main() {
-  await mongoose.connect(mongoDB);
-}
-
-const messageSchema= new mongoose.Schema({
-  user: {type: String, required: true},
-  text: {type: String, required: true},
-  added: String
-})
-
-const Message = mongoose.model('Message', messageSchema);
-
 const indexRouter = require('./routes/index');
 const newMessageRouter = require('./routes/new');
-const { mainModule } = require('process');
 
 const app = express();
 

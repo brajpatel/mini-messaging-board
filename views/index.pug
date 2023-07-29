@@ -2,7 +2,7 @@ extends layout
 
 block content
   div.container
-    h1= title
+    h1= 'Mini Messaging Board'
     ul
       each message, index in messages
         li(style=`--delay:${index + 1}`)
