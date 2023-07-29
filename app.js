@@ -15,15 +15,13 @@ async function main() {
   await mongoose.connect(mongoDB);
 }
 
-// mongoose.connect(
-//   process.env.MONGODB_CONNECTION_STRING,
-//   {
-//     useNewUrlParser: true,
-//     useUnifiedTopology: true
-//   }
-// )
-// .then(() => console.log("MongoDB Connected!"))
-// .catch((err) => console.log(err));
+const messageSchema= new mongoose.Schema({
+  user: {type: String, required: true},
+  text: {type: String, required: true},
+  added: String
+})
+
+const Message = mongoose.model('Message', messageSchema);
 
 const indexRouter = require('./routes/index');
 const newMessageRouter = require('./routes/new');
