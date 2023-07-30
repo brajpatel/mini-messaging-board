@@ -16,5 +16,6 @@ All the messages stored in the database are retrieved and displayed on the board
 <br/><br/>
 These are some of the challenges I faced while making this project:
 - Working with Pug and understanding how it works with whitespace when creating views
-- I
+- Importing 'secrets' to fly.io so the app could successfully be deployed
 ## View Project
+Check out my Mini Messaging Board by clicking [here](https://snowy-violet-6688.fly.dev/). Feel free to create a message to add to the board!!
