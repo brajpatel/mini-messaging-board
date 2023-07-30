@@ -1,7 +1,7 @@
 # Mini Messaging Board
-![preview-img1](https://github.com/brajpatel/mini-messaging-board/blob/main/public/images/preview-img1.jpg)
-![preview-img2](https://github.com/brajpatel/mini-messaging-board/blob/main/public/images/preview-img2.jpg)
-![preview-img3](https://github.com/brajpatel/mini-messaging-board/blob/main/public/images/preview-img3.jpg)
+![preview-img1](https://github.com/brajpatel/mini-messaging-board/blob/main/public/images/preview-img1.png)
+![preview-img2](https://github.com/brajpatel/mini-messaging-board/blob/main/public/images/preview-img2.png)
+![preview-img3](https://github.com/brajpatel/mini-messaging-board/blob/main/public/images/preview-img3.png)
 ## Summary
 This app was created for The Odin Project's [Express & Mongoose](https://www.theodinproject.com/paths/full-stack-javascript/courses/nodejs#express-mongoose) in the NodeJS Course. The main objectives of this project were:
 - setting up a project with 'express-generator'
