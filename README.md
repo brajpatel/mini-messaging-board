@@ -9,6 +9,7 @@ This app was created for The Odin Project's [Express & Mongoose](https://www.the
 - utilising a templating engine
 - working with a database to store and retrive data
 - deploying the app by using a 'Platform as a Service(PaaS)'
+</br></br>
 I chose to work with [Pug](https://pugjs.org/api/getting-started.html) over other templating languages like EJS to push myself to learn or at least expose myself to something that didn't look or feel like "normal" HTML to work with. I also chose to use [MongoDB Atlas](https://www.mongodb.com/atlas/database) for the app's databse and used [Mongoose](https://mongoosejs.com/) to connect my Express app to the database.
 The app was finally deployed using [Fly.io](https://fly.io/).
 ## About
